@@ -1,7 +1,7 @@
 {
-  "name": "peep-blog-frontend",
+  "name": "neep-blog-frontend",
   "version": "0.0.0",
-  "description": "Small description for peep-blog-frontend goes here",
+  "description": "Small description for neep-blog-frontend goes here",
   "private": true,
   "directories": {
     "doc": "doc",

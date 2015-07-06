@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'peep-blog-frontend',
+    modulePrefix: 'neep-blog-frontend',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
