@@ -1,32 +1,22 @@
----
 language: node_js
 node_js:
-  - "0.12"
-
+- '0.12'
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install:
-  - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
-  - "npm config set spin false"
-  - "npm install -g npm@^2"
-
+- export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
+- npm config set spin false
+- npm install -g npm@^2
 install:
-  - npm install -g bower
-  - npm install
-  - bower install
-
+- npm install -g bower
+- npm install
+- bower install
 script:
-  - npm test
-
+- npm test
 deploy:
   provider: heroku
-  skip_cleanup: true
+  strategy: git
   api_key:
-    secure: wWJXYJrq/urYkkEE0larDtoA98iQ7POwqIKCTlk27gQxRUHxFlafbLT9KXWXXk0kRjgNRUDLORdc/EFVzdDMqj5QyxDkEbifWMqDGIIkeuWTFzNHH8b7DS9CxHC2rR6051LAuZOmcCoQ4Cri4gPH1/ilvfCVvFiR0jjnlfwAfdqvSjuL2+GWonLH9svIqUp7j0IAQzvrUnHNSU8UDgBukB3vCQ+pIIxwzRTta0qKkUQM7QPjAiVtfOvOSQHm8J8xy4/kVaC030zIaCQC6UzPL69aJlPCaOFBLVSJYd9A1BrcHmFPYgg/3kz5Q/CZDFrmenRz/kD0f1FuoDFK2WaCOBGucG6nauTSpS1iS/pHZQ2uQwkpUSUGyWtK16oG2AgcO8jdrF9baJzUoa8dIMxTTtI0pRn12MGh4sPk8pIDFIfVHM8S1ArF6D8O4SXfoBnCbcbj+6MP3Vhkmgd+USAgGKUZMHIvujboRL6omOQK6JKcdWHj3Ml6atgvnCjiw6eLaTnOlHVSlMhUSAG60/s2H6lZNaW3rrak0EqPBzI611fpRKWOV0a84trAFG4Agu6yOykMEz75wN09RfIUBRnhRNwEBbzO5VbuOpUUnTjHylmzwbyyYdjtvkl4SgyIrukvW5vcXXfpz7YIaeL6XFUvB/nVa+LtmqduY6pZXF3B9as=
-  app:
-    master: neep-blog-frontend
-  buildpack: https://github.com/tonycoco/heroku-buildpack-ember-cli.git
+    secure: tVAmlX9gaDv2wxyoHJLCZ4uu92gNpTTq8OSRR6eXjeoGpevfasToGJYcSBtXnG05dqRH0jWViZOszpKNpv6xpqwvbpko8Xs6Ytv/iN4UNduBpGw+Bdn6ZAfvjsJ4TxAkA9JL55j0Tj9Ck6AkU8IK4++PpGtyre/qVYZ9OKo6yX7NO9T1xknxiiZzlZGUuIwGMm4OK5uHqd2XmU+LSIO2kgeS/BKnSQqq6t0/2gqSdHzyYIa0DFr50lOFNytl52w1GnE/NzwBPQ5/qoG/n8F4zp3Accq/Ac7r8VAJEVbFZ7ONAEi7HxSu7NhuZpl8DwO6uFThn4lmAEk4qMf8GqBZSBOfWazgqQdvSQlO9b0xTJXB3bIm0eRqDClwzaqlmS8kS4J68bALsROEv4gURb3PrejqhtBYszi8WuUvVRnS/Za/8djj9SweLKjtIbER1dQ42UgLsiLUISg98Hxk/weZ+4+cHZj22pm0lsDIRkxVBmQaBGB9s79J/QkmJZDcxI4cqXXw1KF0AguX+O/Ma9TD8VxIue2FOohJrM/XKlr5RyPmEqqH8+gnHZzoMEPjyYR0mNOMe9XeXy3iet17PSrok0IZGqywBn2AzzoDWOuPXzp3T4UeyslRpsp6CxhtKj8VlOpqxrmVfN0wmWvAQ/nl/jcC/LZ21mc+YzUOw/10qUI=
