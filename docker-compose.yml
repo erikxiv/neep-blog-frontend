@@ -1,0 +1,10 @@
+ember:
+  image: danlynn/ember-cli:0.2.7
+  ports:
+   - "80:4200"
+   - "35729:35729"
+  volumes:
+   - .:/tmp/myapp
+  entrypoint:
+   - sh
+  command: -c "tar -xmf /tmp/myapp/tmp/init.tar && ember server"

@@ -28,9 +28,9 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.contentSecurityPolicy = {
       'default-src': "'none'",
-      'script-src': "'self'",
+      'script-src': "'self' http://boot2docker:35729",
       'font-src': "'self'",
-      'connect-src': "'self' http://localhost:4000",
+      'connect-src': "'self' http://localhost:4000 ws://boot2docker:35729",
       'img-src': "'self'",
       'style-src': "'self'",
       'media-src': "'self'"
